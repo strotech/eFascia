@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-fascia-dev-152158-authRole",
+      "UnauthRoleArn": "arn:aws:iam::465392140585:role/amplify-fascia-dev-152158-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::465392140585:role/amplify-fascia-dev-152158-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-fascia-dev-152158-deployment",
+      "UnauthRoleName": "amplify-fascia-dev-152158-unauthRole",
+      "StackName": "amplify-fascia-dev-152158",
+      "StackId": "arn:aws:cloudformation:us-east-1:465392140585:stack/amplify-fascia-dev-152158/3f3555a0-192f-11ec-ab4c-1226b15cf091",
+      "AmplifyAppId": "d3662rn4ni84ci"
+    }
+  }
+}

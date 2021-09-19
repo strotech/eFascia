@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'bona-nova-google';
+    src: url("~../fonts/Bona_Nova/BonaNova-Regular.ttf") format("truetype"),url("~../fonts/Bona_Nova/BonaNova-Italic.ttf") format("truetype"),url("~../fonts/Bona_Nova/BonaNova-Bold.ttf") format("truetype");
+}
+
+$google-bona-nova-font: 'bona-nova-google', sans-serif;
