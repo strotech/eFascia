@@ -23,13 +23,13 @@ const ErrorMessage = ({ error }) => {
   };
 
   return (
-   
-    <div className={`alert alert-${error.type}`} role="alert">
-      <div className="header">{error.text}</div>
-      {errorDetails()}
-      {errorType()}
+    <div className="card">
+      <div className={`alert alert-${error.type}`} role="alert">
+        <div className="header">{error.text}</div>
+        {errorDetails()}
+        {errorType()}
+      </div>
     </div>
-     
   );
 };
 

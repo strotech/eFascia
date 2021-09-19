@@ -10,7 +10,7 @@ const TweetsContainer = () => {
           id: -1,
           text : 'No tweets found for the search criteria!'
       }],
-      type:'initial'
+      type:'warning'
     });
   const [loading,isLoading] = useState(false);
   const getTweets = async (searchValue)=>{
