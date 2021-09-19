@@ -3,7 +3,13 @@ import React from "react";
 const ErrorMessage = ({ errors }) => {
   const errorDetails = () => {
     if (errors && errors.result.length > 0 ) {
-      errors.map(error=><p key={error.text}>{error.text}</p>)       
+      return (
+        <div>
+          {errors.result.map(error=>{
+            <p key={error.text}>{error.text}</p>  
+          })}
+        </div>
+      )   
     }
   };
 
