@@ -1,6 +1,6 @@
 {
     "identityPoolName": "efascia_identitypool_63f4f1a0",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "efasci63f4f1a0",
     "userPoolName": "efascia_userpool_63f4f1a0",
     "autoVerifiedAttributes": [
