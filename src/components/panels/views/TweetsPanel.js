@@ -48,7 +48,7 @@ const TweetsPanel =(props)=> {
             </div>
           </form>
         </div>
-        {(tweets && (tweets.type === 'warning') && loading==false)  ? <ErrorMessage error={tweets} />:null}
+        {(tweets && (tweets.type === 'warning') && loading==false)  ? <ErrorMessage errors={tweets} />:null}
         {tweets && tweets.type === 'success' && loading==false ? <Tweets tweets={tweets} />:null}
         {loading===true?<SpinnerWidget />:null}        
       </div>

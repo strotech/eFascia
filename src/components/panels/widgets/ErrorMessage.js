@@ -1,18 +1,18 @@
 import React from "react";
 
-const ErrorMessage = ({ error }) => {
+const ErrorMessage = ({ errors }) => {
   const errorDetails = () => {
-    if (error && error.text) {
-      return <p key={error.text}>{error.text}</p>
+    if (errors && errors.result.length > 0 ) {
+      errors.map(error=><p key={error.text}>{error.text}</p>)       
     }
   };
 
   const errorType = () => {
-    if (error && error.type) {
+    if (errors && errors.type) {
       return (
         <em>
           See
-          <a href={error.type} target="_blank" rel="noopener noreferrer">
+          <a href={errors.type} target="_blank" rel="noopener noreferrer">
             {" "}
             Twitter documentation{" "}
           </a>
