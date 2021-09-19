@@ -1,6 +1,8 @@
 import React, {useState}  from 'react';
 import Tweet from './Tweet';
 import SpinnerWidget from '../widgets/SpinnerWidget';
+import ErrorMessage from '../widgets/ErrorMessage';
+
 
 const TweetsPanel =(props)=> {
     const {tweets,getTweets, isLoading, loading, setTweets } = props;
@@ -44,7 +46,10 @@ const TweetsPanel =(props)=> {
             </div>
           </div>
         </form>
-        {tweets && tweets.result && tweets.result.length>0 ? tweets.result.map((tweet) => (
+        {tweets && tweets.result && tweets.result.length === 0 && loading==false ? tweets.result.map((error) => (
+            <ErrorMessage error={error} />
+        )):null}
+        {tweets && tweets.result && tweets.result.length >0 && loading==false ? tweets.result.map((tweet) => (
             <Tweet tweet={tweet} />
         )):null}
         {loading===true?<SpinnerWidget />:null}
