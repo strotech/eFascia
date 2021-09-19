@@ -6,9 +6,11 @@ const Tweets = (props) => {
   
    return (
       <div className="card text-center overflow-auto">
-        {tweets && tweets.result.length>0 ? tweets.results.map(tweet=>(
-          <Tweet tweet={tweet} />
-        )):null}
+        <div className="card-body">
+          {tweets && tweets.result.length>0 ? tweets.results.map(tweet=>(
+            <Tweet tweet={tweet} />
+          )):null}
+        </div>
       </div>
     );
 };
