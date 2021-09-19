@@ -6,7 +6,7 @@ const ErrorMessage = ({ errors }) => {
       return (
         <div>
           {errors.result.map(error=>{
-            <p key={error.text}>{error.text}</p>  
+            return (<p key={error.text}>{error.text}</p>) 
           })}
         </div>
       )   
