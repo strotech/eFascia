@@ -8,7 +8,7 @@ const TweetsContainer = () => {
     {
       result:[{
           id: -1,
-          text : 'No tweets found for the search criteria!'
+          text : 'No hashtags searched!!. You can try with some of the most recently searched hashtags like #Covid19, etc.'
       }],
       type:'warning'
     });
