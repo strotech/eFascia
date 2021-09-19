@@ -1,15 +1,30 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-fascia-dev-152158-authRole",
-      "UnauthRoleArn": "arn:aws:iam::465392140585:role/amplify-fascia-dev-152158-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::465392140585:role/amplify-fascia-dev-152158-authRole",
+      "AuthRoleName": "amplify-efascia-dev-160532-authRole",
+      "UnauthRoleArn": "arn:aws:iam::465392140585:role/amplify-efascia-dev-160532-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::465392140585:role/amplify-efascia-dev-160532-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-fascia-dev-152158-deployment",
-      "UnauthRoleName": "amplify-fascia-dev-152158-unauthRole",
-      "StackName": "amplify-fascia-dev-152158",
-      "StackId": "arn:aws:cloudformation:us-east-1:465392140585:stack/amplify-fascia-dev-152158/3f3555a0-192f-11ec-ab4c-1226b15cf091",
-      "AmplifyAppId": "d3662rn4ni84ci"
+      "DeploymentBucketName": "amplify-efascia-dev-160532-deployment",
+      "UnauthRoleName": "amplify-efascia-dev-160532-unauthRole",
+      "StackName": "amplify-efascia-dev-160532",
+      "StackId": "arn:aws:cloudformation:us-east-1:465392140585:stack/amplify-efascia-dev-160532/51a45cd0-1935-11ec-8194-0ae80f9f295d",
+      "AmplifyAppId": "d2dn39epqbzp5v"
+    },
+    "categories": {
+      "auth": {
+        "cognito63f4f1a0": {}
+      },
+      "function": {
+        "twitter": {
+          "deploymentBucketName": "amplify-efascia-dev-160532-deployment",
+          "s3Key": "amplify-builds/twitter-4f5342366e564f7a4556-build.zip"
+        },
+        "telegram": {
+          "deploymentBucketName": "amplify-efascia-dev-160532-deployment",
+          "s3Key": "amplify-builds/telegram-38393274644332387639-build.zip"
+        }
+      }
     }
   }
 }
