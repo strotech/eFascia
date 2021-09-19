@@ -24,8 +24,7 @@ const ErrorMessage = ({ errors }) => {
 
   return (
     <div className="card">
-      <div className={`alert alert-${error.type}`} role="alert">
-        <div className="header">{error.text}</div>
+      <div className={`alert alert-${errors.type}`} role="alert">
         {errorDetails()}
         {errorType()}
       </div>
