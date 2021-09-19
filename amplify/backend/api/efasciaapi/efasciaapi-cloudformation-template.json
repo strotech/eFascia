@@ -168,12 +168,6 @@
                     }
                   },
                   
-                    "security": [
-                        {
-                          "sigv4": []
-                        }
-                      ],
-                  
                   "x-amazon-apigateway-integration": {
                     "responses": {
                       "default": {
@@ -272,12 +266,6 @@
                       }
                     }
                   },
-                  
-                    "security": [
-                        {
-                          "sigv4": []
-                        }
-                      ],
                   
                   "x-amazon-apigateway-integration": {
                     "responses": {
@@ -379,12 +367,6 @@
                     }
                   },
                   
-                    "security": [
-                        {
-                          "sigv4": []
-                        }
-                      ],
-                  
                   "x-amazon-apigateway-integration": {
                     "responses": {
                       "default": {
@@ -483,12 +465,6 @@
                       }
                     }
                   },
-                  
-                    "security": [
-                        {
-                          "sigv4": []
-                        }
-                      ],
                   
                   "x-amazon-apigateway-integration": {
                     "responses": {
@@ -590,12 +566,6 @@
                     }
                   },
                   
-                    "security": [
-                        {
-                          "sigv4": []
-                        }
-                      ],
-                  
                   "x-amazon-apigateway-integration": {
                     "responses": {
                       "default": {
@@ -694,12 +664,6 @@
                       }
                     }
                   },
-                  
-                    "security": [
-                        {
-                          "sigv4": []
-                        }
-                      ],
                   
                   "x-amazon-apigateway-integration": {
                     "responses": {
@@ -845,7 +809,7 @@
         
         
 
-      "DeploymentAPIGWefasciaapi": {
+      "DeploymentAPIGWefasciaapicb9c2398": {
         "Type": "AWS::ApiGateway::Deployment",
         "Properties": {
           "Description": "The Development stage deployment of your API.",

@@ -1,83 +1,63 @@
 {
-  "paths": [
-    {
-      "name": "/api/rules",
-      "lambdaFunction": "twitter",
-      "privacy": {
-        "private": true,
-        "auth": [
-          "/POST",
-          "/GET",
-          "/PUT",
-          "/PATCH",
-          "/DELETE"
-        ]
-      },
-      "policyResourceName": "/api/rules"
+    "paths": [
+        {
+            "name": "/api/rules",
+            "lambdaFunction": "twitter",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/api/rules"
+        },
+        {
+            "name": "/api/tweets/{hashtag}",
+            "lambdaFunction": "twitter",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/api/tweets/*"
+        },
+        {
+            "name": "/telegram/covid",
+            "lambdaFunction": "telegram",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/telegram/covid"
+        }
+    ],
+    "resourceName": "efasciaapi",
+    "apiName": "efasciaapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "twitter"
+        },
+        {
+            "lambdaFunction": "telegram"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-efascia-dev-160532-authRole",
+        "unAuthRoleName": "amplify-efascia-dev-160532-unauthRole"
     },
-    {
-      "name": "/api/tweets/{hashtag}",
-      "lambdaFunction": "twitter",
-      "privacy": {
-        "private": true,
-        "auth": [
-          "/POST",
-          "/GET",
-          "/PUT",
-          "/PATCH",
-          "/DELETE"
-        ]
-      },
-      "policyResourceName": "/api/tweets/*"
-    },
-    {
-      "name": "/telegram/covid",
-      "lambdaFunction": "telegram",
-      "privacy": {
-        "private": true,
-        "auth": [
-          "/POST",
-          "/GET",
-          "/PUT",
-          "/PATCH",
-          "/DELETE"
-        ]
-      },
-      "policyResourceName": "/telegram/covid"
-    }
-  ],
-  "resourceName": "efasciaapi",
-  "apiName": "efasciaapi",
-  "functionArns": [
-    {
-      "lambdaFunction": "twitter"
-    },
-    {
-      "lambdaFunction": "telegram"
-    }
-  ],
-  "privacy": {
-    "auth": 3,
-    "unauth": 0,
-    "authRoleName": "amplify-efascia-dev-160532-authRole",
-    "unAuthRoleName": "amplify-efascia-dev-160532-unauthRole"
-  },
-  "dependsOn": [
-    {
-      "category": "function",
-      "resourceName": "twitter",
-      "attributes": [
-        "Name",
-        "Arn"
-      ]
-    },
-    {
-      "category": "function",
-      "resourceName": "telegram",
-      "attributes": [
-        "Name",
-        "Arn"
-      ]
-    }
-  ]
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "twitter",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "telegram",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "cb9c2398"
 }

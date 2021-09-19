@@ -114,10 +114,8 @@ app.post("/api/rules", async (req, res) => {
     const tweetList = await twitterClient.tweets.search({
         q: `#{hashtag}`,
         result_type: 'recent',
-    }).then ((response) => {
-      return response;
-    }).catch ((err) => console.error(err))
-    await res.json(tweetList.statuses.map(status=>{
+    });
+    res.json(tweetList.statuses.map(status=>{
       return {
         id: status.id,
         text: status.text
