@@ -7,9 +7,7 @@ import DashboardPanel from '../../panels/views/DashboardPanel'
 API.configure(config);
 
 const DashboardContainer =()=> {
-    // useEffect(()=>{
-    //   API.get('efasciaapi','/item/test').then(res=>console.log(res));
-    // },[]);
+   
     return (
         <DashboardPanel />
     );
