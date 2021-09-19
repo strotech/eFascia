@@ -4,7 +4,7 @@ import TweetsPanel from '../../panels/views/TweetsPanel'
 
 const TweetsContainer = () => {
  
-  const [tweets,setTweets] = useState({});
+  const [tweets,setTweets] = useState({result:[],type:'initial'});
   const [loading,isLoading] = useState(false);
   const getTweets = async (searchValue)=>{
     await API.get('efasciaapi','/telegram/covid').then(res=>console.log(res));

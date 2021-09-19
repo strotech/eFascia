@@ -46,10 +46,10 @@ const TweetsPanel =(props)=> {
             </div>
           </div>
         </form>
-        {(tweets && tweets.result && tweets.result.length === 0 && loading==false) ||  JSON.stringify(tweets)==='{}' ? tweets.result.map((error) => (
+        {(tweets && (tweets.type === 'initial'||tweets.type === 'warning') && loading==false)  ? tweets.result.map((error) => (
             <ErrorMessage error={error} />
         )):null}
-        {tweets && tweets.result && tweets.result.length >0 && loading==false ? tweets.result.map((tweet) => (
+        {tweets && tweets.type === 'success' && loading==false ? tweets.result.map((tweet) => (
             <Tweet tweet={tweet} />
         )):null}
         {loading===true?<SpinnerWidget />:null}
