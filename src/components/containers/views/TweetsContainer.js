@@ -8,7 +8,7 @@ const TweetsContainer = () => {
     {
       result:[{
           id: -1,
-          text : 'No hashtags searched!!. You can try with some of the most recently searched hashtags like #Covid19, etc.'
+          text : 'No hashtags searched!!. You can try with some of the most recently searched hashtags like #Covid19,#flood18, etc.'
       }],
       type:'warning'
     });
@@ -31,7 +31,17 @@ const TweetsContainer = () => {
         type: 'warning'
       })
     }
-    setTweets(tweetResult);
+    Analytics.record({
+      name: 'hashtag', 
+      // Attribute values must be strings
+      attributes: { hashtagName: searchValue }
+    });
+    setTweets(prevState=>{
+      return {
+        ...prevState,
+        tweetResult
+      }
+    });
   }
 
   return (

@@ -1,6 +1,7 @@
 import React from "react";
 
 const ErrorMessage = ({ errors }) => {
+  console.log("errors",errors)
   const errorDetails = () => {
     if (errors && errors.result.length > 0 ) {
       return (
@@ -29,8 +30,8 @@ const ErrorMessage = ({ errors }) => {
   };
 
   return (
-    <div className="card">
-      <div className={`alert alert-${errors.type}`} role="alert">
+    <div className="card search-empty">
+      <div className={`border border-warning alert alert-${errors.type} custom-alert`} role="alert">
         {errorDetails()}
         {errorType()}
       </div>

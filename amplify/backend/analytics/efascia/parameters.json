@@ -1,0 +1,21 @@
+{
+    "appName": "efascia",
+    "roleName": "pinpointLambdaRole7abf94be",
+    "cloudformationPolicyName": "cloudformationPolicy7abf94be",
+    "cloudWatchPolicyName": "cloudWatchPolicy7abf94be",
+    "pinpointPolicyName": "pinpointPolicy7abf94be",
+    "authPolicyName": "pinpoint_amplify_7abf94be",
+    "unauthPolicyName": "pinpoint_amplify_7abf94be",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

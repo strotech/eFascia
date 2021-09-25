@@ -11,46 +11,542 @@ const TweetsPanel =(props)=> {
       getTweets(searchValue)
       isLoading(true);
     }
-    console.log('tweets',tweets)
+    const onClear = () => {
+        setTweets({})
+        isLoading(false);
+        setSearchValue('');
+    }
+    const typeOfTweet = (type)=>{
+        // other possible class values: bg-info bg-warning
+        switch(type) {
+            case true:
+              return "bg-success"
+              break;
+            case false:
+                return "bg-danger"
+              break;
+            default:
+                return "bg-base"
+          }
+    }
+    const demo = {
+        result:[
+            // {
+            //     id: -1,
+            //     text : 'No hashtags searched!!. You can try with some of the most recently searched hashtags like #Covid19, etc.'
+            // }
+            {
+                "created_at": "Sun Feb 25 18:11:01 +0000 2018",
+                "id": 967824267948773377,
+                "id_str": "967824267948773377",
+                "text": "From pilot to astronaut, Robert H. Lawrence was the first African-American to be selected as an astronaut by any na… https://t.co/FjPEWnh804",
+                "truncated": true,
+                "entities": {
+                    "hashtags": [],
+                    "symbols": [],
+                    "user_mentions": [],
+                    "urls": [
+                        {
+                            "url": "https://t.co/FjPEWnh804",
+                            "expanded_url": "https://twitter.com/i/web/status/967824267948773377",
+                            "display_url": "twitter.com/i/web/status/9…",
+                            "indices": [
+                                117,
+                                140
+                            ]
+                        }
+                    ]
+                },
+                "metadata": {
+                    "result_type": "popular",
+                    "iso_language_code": "en"
+                },
+                "source": "<a href='https://www.sprinklr.com' rel='nofollow'>Sprinklr</a>",
+                "in_reply_to_status_id": null,
+                "in_reply_to_status_id_str": null,
+                "in_reply_to_user_id": null,
+                "in_reply_to_user_id_str": null,
+                "in_reply_to_screen_name": null,
+                "user": {
+                    "id": 11348282,
+                    "id_str": "11348282",
+                    "name": "NASA",
+                    "screen_name": "NASA",
+                    "location": "",
+                    "description": "Explore the universe and discover our home planet with @NASA. We usually post in EST (UTC-5)",
+                    "url": "https://t.co/TcEE6NS8nD",
+                    "entities": {
+                        "url": {
+                            "urls": [
+                                {
+                                    "url": "https://t.co/TcEE6NS8nD",
+                                    "expanded_url": "http://www.nasa.gov",
+                                    "display_url": "nasa.gov",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ]
+                                }
+                            ]
+                        },
+                        "description": {
+                            "urls": []
+                        }
+                    },
+                    "protected": false,
+                    "followers_count": 28605561,
+                    "friends_count": 270,
+                    "listed_count": 90405,
+                    "created_at": "Wed Dec 19 20:20:32 +0000 2007",
+                    "favourites_count": 2960,
+                    "utc_offset": -18000,
+                    "time_zone": "Eastern Time (US & Canada)",
+                    "geo_enabled": false,
+                    "verified": true,
+                    "statuses_count": 50713,
+                    "lang": "en",
+                    "contributors_enabled": false,
+                    "is_translator": false,
+                    "is_translation_enabled": false,
+                    "profile_background_color": "000000",
+                    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/590922434682880000/3byPYvqe.jpg",
+                    "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/590922434682880000/3byPYvqe.jpg",
+                    "profile_background_tile": false,
+                    "profile_image_url": "http://pbs.twimg.com/profile_images/188302352/nasalogo_twitter_normal.jpg",
+                    "profile_image_url_https": "https://bootdey.com/img/Content/avatar/avatar5.png",
+                    "profile_banner_url": "https://pbs.twimg.com/profile_banners/11348282/1518798395",
+                    "profile_link_color": "205BA7",
+                    "profile_sidebar_border_color": "000000",
+                    "profile_sidebar_fill_color": "F3F2F2",
+                    "profile_text_color": "000000",
+                    "profile_use_background_image": true,
+                    "has_extended_profile": true,
+                    "default_profile": false,
+                    "default_profile_image": false,
+                    "following": null,
+                    "follow_request_sent": null,
+                    "notifications": null,
+                    "translator_type": "regular"
+                },
+                "geo": null,
+                "coordinates": null,
+                "place": null,
+                "contributors": null,
+                "is_quote_status": false,
+                "retweet_count": 988,
+                "favorite_count": 3875,
+                "favorited": false,
+                "retweeted": false,
+                "possibly_sensitive": false,
+                "lang": "en"
+            },
+            {
+                "created_at": "Sun Feb 25 18:11:01 +0000 2018",
+                "id": 967824267948773377,
+                "id_str": "967824267948773377",
+                "text": "From pilot to astronaut, Robert H. Lawrence was the first African-American to be selected as an astronaut by any na… https://t.co/FjPEWnh804",
+                "truncated": true,
+                "entities": {
+                    "hashtags": [],
+                    "symbols": [],
+                    "user_mentions": [],
+                    "urls": [
+                        {
+                            "url": "https://t.co/FjPEWnh804",
+                            "expanded_url": "https://twitter.com/i/web/status/967824267948773377",
+                            "display_url": "twitter.com/i/web/status/9…",
+                            "indices": [
+                                117,
+                                140
+                            ]
+                        }
+                    ]
+                },
+                "metadata": {
+                    "result_type": "popular",
+                    "iso_language_code": "en"
+                },
+                "source": "<a href='https://www.sprinklr.com' rel='nofollow'>Sprinklr</a>",
+                "in_reply_to_status_id": null,
+                "in_reply_to_status_id_str": null,
+                "in_reply_to_user_id": null,
+                "in_reply_to_user_id_str": null,
+                "in_reply_to_screen_name": null,
+                "user": {
+                    "id": 11348282,
+                    "id_str": "11348282",
+                    "name": "NASA",
+                    "screen_name": "NASA",
+                    "location": "",
+                    "description": "Explore the universe and discover our home planet with @NASA. We usually post in EST (UTC-5)",
+                    "url": "https://t.co/TcEE6NS8nD",
+                    "entities": {
+                        "url": {
+                            "urls": [
+                                {
+                                    "url": "https://t.co/TcEE6NS8nD",
+                                    "expanded_url": "http://www.nasa.gov",
+                                    "display_url": "nasa.gov",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ]
+                                }
+                            ]
+                        },
+                        "description": {
+                            "urls": []
+                        }
+                    },
+                    "protected": false,
+                    "followers_count": 28605561,
+                    "friends_count": 270,
+                    "listed_count": 90405,
+                    "created_at": "Wed Dec 19 20:20:32 +0000 2007",
+                    "favourites_count": 2960,
+                    "utc_offset": -18000,
+                    "time_zone": "Eastern Time (US & Canada)",
+                    "geo_enabled": false,
+                    "verified": true,
+                    "statuses_count": 50713,
+                    "lang": "en",
+                    "contributors_enabled": false,
+                    "is_translator": false,
+                    "is_translation_enabled": false,
+                    "profile_background_color": "000000",
+                    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/590922434682880000/3byPYvqe.jpg",
+                    "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/590922434682880000/3byPYvqe.jpg",
+                    "profile_background_tile": false,
+                    "profile_image_url": "http://pbs.twimg.com/profile_images/188302352/nasalogo_twitter_normal.jpg",
+                    "profile_image_url_https": "https://bootdey.com/img/Content/avatar/avatar5.png",
+                    "profile_banner_url": "https://pbs.twimg.com/profile_banners/11348282/1518798395",
+                    "profile_link_color": "205BA7",
+                    "profile_sidebar_border_color": "000000",
+                    "profile_sidebar_fill_color": "F3F2F2",
+                    "profile_text_color": "000000",
+                    "profile_use_background_image": true,
+                    "has_extended_profile": true,
+                    "default_profile": false,
+                    "default_profile_image": false,
+                    "following": null,
+                    "follow_request_sent": null,
+                    "notifications": null,
+                    "translator_type": "regular"
+                },
+                "geo": null,
+                "coordinates": null,
+                "place": null,
+                "contributors": null,
+                "is_quote_status": false,
+                "retweet_count": 988,
+                "favorite_count": 3875,
+                "favorited": false,
+                "retweeted": false,
+                "possibly_sensitive": false,
+                "lang": "en"
+            },
+            {
+                "created_at": "Sun Feb 25 18:11:01 +0000 2018",
+                "id": 967824267948773377,
+                "id_str": "967824267948773377",
+                "text": "From pilot to astronaut, Robert H. Lawrence was the first African-American to be selected as an astronaut by any na… https://t.co/FjPEWnh804",
+                "truncated": true,
+                "entities": {
+                    "hashtags": [],
+                    "symbols": [],
+                    "user_mentions": [],
+                    "urls": [
+                        {
+                            "url": "https://t.co/FjPEWnh804",
+                            "expanded_url": "https://twitter.com/i/web/status/967824267948773377",
+                            "display_url": "twitter.com/i/web/status/9…",
+                            "indices": [
+                                117,
+                                140
+                            ]
+                        }
+                    ]
+                },
+                "metadata": {
+                    "result_type": "popular",
+                    "iso_language_code": "en"
+                },
+                "source": "<a href='https://www.sprinklr.com' rel='nofollow'>Sprinklr</a>",
+                "in_reply_to_status_id": null,
+                "in_reply_to_status_id_str": null,
+                "in_reply_to_user_id": null,
+                "in_reply_to_user_id_str": null,
+                "in_reply_to_screen_name": null,
+                "user": {
+                    "id": 11348282,
+                    "id_str": "11348282",
+                    "name": "NASA",
+                    "screen_name": "NASA",
+                    "location": "",
+                    "description": "Explore the universe and discover our home planet with @NASA. We usually post in EST (UTC-5)",
+                    "url": "https://t.co/TcEE6NS8nD",
+                    "entities": {
+                        "url": {
+                            "urls": [
+                                {
+                                    "url": "https://t.co/TcEE6NS8nD",
+                                    "expanded_url": "http://www.nasa.gov",
+                                    "display_url": "nasa.gov",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ]
+                                }
+                            ]
+                        },
+                        "description": {
+                            "urls": []
+                        }
+                    },
+                    "protected": false,
+                    "followers_count": 28605561,
+                    "friends_count": 270,
+                    "listed_count": 90405,
+                    "created_at": "Wed Dec 19 20:20:32 +0000 2007",
+                    "favourites_count": 2960,
+                    "utc_offset": -18000,
+                    "time_zone": "Eastern Time (US & Canada)",
+                    "geo_enabled": false,
+                    "verified": true,
+                    "statuses_count": 50713,
+                    "lang": "en",
+                    "contributors_enabled": false,
+                    "is_translator": false,
+                    "is_translation_enabled": false,
+                    "profile_background_color": "000000",
+                    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/590922434682880000/3byPYvqe.jpg",
+                    "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/590922434682880000/3byPYvqe.jpg",
+                    "profile_background_tile": false,
+                    "profile_image_url": "http://pbs.twimg.com/profile_images/188302352/nasalogo_twitter_normal.jpg",
+                    "profile_image_url_https": "https://bootdey.com/img/Content/avatar/avatar5.png",
+                    "profile_banner_url": "https://pbs.twimg.com/profile_banners/11348282/1518798395",
+                    "profile_link_color": "205BA7",
+                    "profile_sidebar_border_color": "000000",
+                    "profile_sidebar_fill_color": "F3F2F2",
+                    "profile_text_color": "000000",
+                    "profile_use_background_image": true,
+                    "has_extended_profile": true,
+                    "default_profile": false,
+                    "default_profile_image": false,
+                    "following": null,
+                    "follow_request_sent": null,
+                    "notifications": null,
+                    "translator_type": "regular"
+                },
+                "geo": null,
+                "coordinates": null,
+                "place": null,
+                "contributors": null,
+                "is_quote_status": false,
+                "retweet_count": 988,
+                "favorite_count": 3875,
+                "favorited": false,
+                "retweeted": false,
+                "possibly_sensitive": false,
+                "lang": "en"
+            }
+        ],
+        type:'success'
+    }
+    console.log('demo',demo)
     return (
-      <div className="container">
-        <div className="card">
-          <form onSubmit={(e) => {
-            e.preventDefault();
-            onSubmit();
-            }}>
-            <div className="input-group mb-3">
-              <div className="input-group-prepend">
-                <span className="input-group-text" >Hashtag: #</span>
+      <div class="container">
+      <div class="row">
+          <div class="col-lg-12 card-margin">
+              <div class="card search-form">
+                  <div class="card-body p-0">
+                      <form id="search-form" onSubmit={e=>{
+                           e.preventDefault();
+                           onSubmit();
+                      }}>
+                          <div class="row">
+                              <div class="col-12">
+                                  <div class="row no-gutters">
+                                      <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                          <select class="form-control" id="exampleFormControlSelect1">
+                                              <option>Select Type</option>
+                                              <option>Hashtag</option>
+                                              <option>Text</option>
+                                              <option>User</option>                                             
+                                          </select>
+                                      </div>
+                                      <div class="col-lg-8 col-md-6 col-sm-12 p-0">
+                                          <input type="text" placeholder="Search..." class="form-control" id="search" name="search" />
+                                      </div>
+                                      <div class="col-lg-1 col-md-3 col-sm-12 p-0">
+                                          <button type="submit" class="btn btn-base" onClick={() => onSubmit()}>
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                          </button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
               </div>
-              <input
-                type="text"
-                autoFocus={true}
-                className="form-control"
-                placeholder="Rule details"
-                aria-label="Rule details" 
-                aria-describedby="basic-addon2"
-                value={searchValue}        
-                onChange={e=>setSearchValue(e.target.value)}    
-              />
-              <div className="input-group-append">
-                <button type="button" className="btn btn-outline-secondary" onClick={() => onSubmit()}>
-                  Get Tweets
-                </button>
-                <button type="button" className="btn btn-outline-secondary" onClick={() => {
-                    setTweets({})
-                    isLoading(false);
-                    setSearchValue('');
-                  }}>
-                  Clear
-                </button>
+          </div>
+      </div>
+      {demo.type==="success" && loading==false ?
+            <div class="row">
+              <div class="col-12">
+                  <div class="card card-margin">
+                      <div class="card-body">
+                        
+                            <div class="row search-body">
+                              <div class="col-lg-12">
+                                  <div class="search-result">                                  
+                                        <div class="result-header">
+                                            <div class="row">
+                                                <div class="col-lg-6">                                                 
+                                                        <div class="records">Showing: {demo.result.length} tweet(s)</div>                                                 
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="result-actions">
+                                                        <div class="result-sorting">
+                                                            <span>Sort By:</span>
+                                                            <select class="form-control border-0" id="exampleOption">
+                                                                <option value="1">Relevance</option>
+                                                                <option value="2">Names (A-Z)</option>
+                                                                <option value="3">Names (Z-A)</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="result-views">
+                                                            <button type="button" class="btn btn-soft-base btn-icon">
+                                                                <svg
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    width="24"
+                                                                    height="24"
+                                                                    viewBox="0 0 24 24"
+                                                                    fill="none"
+                                                                    stroke="currentColor"
+                                                                    strokeWidth="2"
+                                                                    strokeLinecap="round"
+                                                                    strokeLinejoin="round"
+                                                                    class="feather feather-list"
+                                                                >
+                                                                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                                                                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                                                                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                                                                    <line x1="3" y1="6" x2="3" y2="6"></line>
+                                                                    <line x1="3" y1="12" x2="3" y2="12"></line>
+                                                                    <line x1="3" y1="18" x2="3" y2="18"></line>
+                                                                </svg>
+                                                            </button>
+                                                            <button type="button" class="btn btn-soft-base btn-icon">
+                                                                <svg
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    width="24"
+                                                                    height="24"
+                                                                    viewBox="0 0 24 24"
+                                                                    fill="none"
+                                                                    stroke="currentColor"
+                                                                    strokeWidth="2"
+                                                                    strokeLinecap="round"
+                                                                    strokeLinejoin="round"
+                                                                    class="feather feather-grid"
+                                                                >
+                                                                    <rect x="3" y="3" width="7" height="7"></rect>
+                                                                    <rect x="14" y="3" width="7" height="7"></rect>
+                                                                    <rect x="14" y="14" width="7" height="7"></rect>
+                                                                    <rect x="3" y="14" width="7" height="7"></rect>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="result-body">
+                                          <div class="table-responsive">
+                                              <table class="table tweet-results">
+                                                  <tbody>
+                                                      {/* {tweets && tweets.type === 'success' && loading==false ? */}
+                                                      {demo.result.map((tweet,index)=>(
+                                                        <tr>
+                                                          <td>
+                                                              <div class="tweet-results-item-user-img">
+                                                                  <img src={tweet.user.profile_image_url_https} alt="Company" />
+                                                              </div>
+                                                          </td>
+                                                          <td>
+                                                              <div class="tweet-results-item-user-title">
+                                                                    <p class="m-0"><a href={tweet.user.url}  class="user-name">{tweet.user.name}</a><span class="text-muted time"> {tweet.created_at}</span></p>
+                                                                    <a href="#" >{tweet.text}</a>                                                                   
+                                                              </div>
+                                                          </td>
+                                                          <td>
+                                                              <div class="tweet-results-item-info">
+                                                                  <p class="type m-0">Retweets: {tweet.retweet_count}</p>
+                                                                  <p class="text-muted m-0"><span class="location">Favorited: {tweet.favorite_count}</span></p>
+                                                              </div>
+                                                          </td>
+                                                          <td>
+                                                            {tweet.entities.hashtags.map(entity=>
+                                                              <div class="tweet-results-item-hashtags ">#{entity}</div>
+                                                              )}
+                                                          </td>
+                                                          <td>
+                                                              <div class="tweet-results-item-category bg-soft-base">
+                                                                  <i class={`indicator ${typeOfTweet(true)}`}></i>
+                                                                  <span>Non-sensitive</span>
+                                                              </div>
+                                                          </td>
+                                                          <td>
+                                                              <div class="tweet-results-item-starred">
+                                                                  <a href="#">
+                                                                      <svg
+                                                                          xmlns="http://www.w3.org/2000/svg"
+                                                                          width="24"
+                                                                          height="24"
+                                                                          viewBox="0 0 24 24"
+                                                                          fill="none"
+                                                                          stroke="currentColor"
+                                                                          strokeWidth="2"
+                                                                          strokeLinecap="round"
+                                                                          strokeLinejoin="round"
+                                                                          class={`feather feather-star ${index%2===0?"starred":''}`}
+                                                                      >
+                                                                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                                                      </svg>
+                                                                  </a>
+                                                              </div>
+                                                          </td>
+                                                      </tr>
+                                                      ))}
+                                                      
+                                                  </tbody>
+                                              </table>
+                                          </div>
+                                      </div>
+                                 
+                                  </div>
+                              </div>
+                          </div>
+                        
+                          <nav class="d-flex justify-content-center">
+                              <ul class="pagination pagination-base pagination-boxed pagination-square mb-0">
+                                  {tweets.length>15?
+                                    <li class="page-item">
+                                        <a class="page-link no-border" href="#">
+                                            <span class="sr-only">More</span>
+                                        </a>
+                                    </li>
+                                  :null}                                 
+                              </ul>
+                          </nav>
+                      </div>
+                  </div>
               </div>
-            </div>
-          </form>
-        </div>
-        {(tweets && (tweets.type === 'warning') && loading==false)  ? <ErrorMessage errors={tweets} />:null}
-        {tweets && tweets.type === 'success' && loading==false ? <Tweets tweets={tweets} />:null}
-        {loading===true?<SpinnerWidget />:null}        
+          </div>
+       : null           
+       } 
+       {demo.type==="warning" && loading==false ?<ErrorMessage errors={demo}/> : null}
+       <SpinnerWidget loading={loading}/>   
       </div>
     );
   }

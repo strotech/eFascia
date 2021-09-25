@@ -18,7 +18,7 @@
       "function": {
         "twitter": {
           "deploymentBucketName": "amplify-efascia-dev-160532-deployment",
-          "s3Key": "amplify-builds/twitter-436b6f634b484835446b-build.zip"
+          "s3Key": "amplify-builds/twitter-31686843486a636a7976-build.zip"
         },
         "telegram": {
           "deploymentBucketName": "amplify-efascia-dev-160532-deployment",

@@ -1,6 +1,8 @@
 yarn install
 yarn start
 
+styles support
+https://www.bootdey.com/snippets/view/General-Search-Results#preview
 =======================================================================================
                                 DEVELOPER SUPPORT
 =======================================================================================

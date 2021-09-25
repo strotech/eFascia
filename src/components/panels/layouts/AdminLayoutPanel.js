@@ -15,7 +15,7 @@ const AdminLayoutPanel =(props)=> {
       <div className="wrapper">
         <SidebarContainer routes={routes} />
         <div className="main-panel" ref={mainPanel}>
-          <AdminNavbarContainer /> 
+          {/* <AdminNavbarContainer />  */}
           <div className="content">
             <Switch>{getRoutes(routes)}</Switch>
           </div>

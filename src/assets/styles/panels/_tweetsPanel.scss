@@ -1,0 +1,240 @@
+body {
+	background: #dcdcdc;
+}
+.tweet-results {
+	color: #3c4142;
+	font-weight: 400;
+	// tr {
+	// 	&:first-child {
+	// 		td {
+	// 			border: 0;
+	// 		}
+	// 	}
+	// }
+	.tweet-results-item-user-img {
+		img {
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+		}
+	}
+	.tweet-results-item-user-title {
+		min-width: 200px;
+		a {
+			font-weight: 400;
+			font-size: 0.875rem;
+			color: #3c4142;
+			line-height: 1.5;
+			text-decoration: none;
+			
+		}
+		.user-name {
+			margin: 0;
+			line-height: 1.5;
+			font-weight: 400;
+			color: #3c4142;
+			font-size: 0.8125rem;
+			color: #3c4142;
+			text-decoration: underline;
+			&:hover {
+				color: #68CBD7;
+				text-decoration: none;
+			}
+			
+		}
+		.time {
+			font-size: 12px;
+			font-weight: 400;
+		}
+        
+	}
+	.tweet-results-item-info {
+		min-width: 100px;
+		font-weight: 400;
+		p {
+			line-height: 1.5;
+			color: #3c4142;
+			font-size: 0.8125rem;
+		}
+		.location {
+			color: #3c4142;
+		}
+	}
+	.tweet-results-item-hashtags {
+		min-width: 70px;
+		font-weight: 400;
+		color: #3c4142;
+		font-size: 0.8125rem;
+	}
+	.tweet-results-item-category {
+		padding: .5rem;
+		display: inline-flex;
+		white-space: nowrap;
+		border-radius: 15px;
+		.indicator {
+			width: 13px;
+			height: 13px;
+			margin-right: .5rem;
+			float: left;
+			border-radius: 50%;
+		}
+		span {
+			font-size: 0.8125rem;
+			color: #3c4142;
+			font-weight: 600;
+		}
+	}
+	.tweet-results-item-starred {
+		svg {
+			width: 20px;
+			height: 20px;
+			color: #fd8b2c;
+		}
+		svg.starred {
+			fill: #fd8b2c;
+		}
+	}
+}
+.bg-soft-base {
+	background-color: #e1f5f7;
+}
+.bg-soft-warning {
+	background-color: #fff4e1;
+}
+.bg-soft-success {
+	background-color: #d1f6f2;
+}
+.bg-soft-danger {
+	background-color: #fedce0;
+}
+.bg-soft-info {
+	background-color: #d7efff;
+}
+.search-form {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 1rem;
+	input {
+		height: 100%;
+		background: transparent;
+		border: 0;
+		display: block;
+		width: 100%;
+		padding: 1rem;
+		height: 100%;
+		font-size: 1rem;
+	}
+	select {
+		background: transparent;
+		border: 0;
+		padding: 1rem;
+		height: 100%;
+		font-size: 1rem;
+		&:focus {
+			border: 0;
+		}
+	}
+	button {
+		height: 100%;
+		width: 100%;
+		font-size: 1rem;
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+	}
+}
+
+.search-body {
+   
+	margin-bottom: 1.5rem;
+	&.search-empty {
+		background: #38da18;
+	}
+	.search-filters {
+		.filter-list {
+			margin-bottom: 1.3rem;
+			.title {
+				color: #3c4142;
+				margin-bottom: 1rem;
+			}
+			.filter-text {
+				color: #727686;
+			}
+		}
+	}
+	.search-result {
+		.result-header {
+			margin-bottom: 2rem;
+			.records {
+				color: #3c4142;
+			}
+			.result-actions {
+				text-align: right;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.result-sorting {
+					display: flex;
+					align-items: center;
+					span {
+						flex-shrink: 0;
+						font-size: 0.8125rem;
+					}
+					select {
+						color: #68CBD7;
+						option {
+							color: #3c4142;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.card-margin {
+	margin-bottom: 1.875rem;
+	margin-bottom: 1.875rem;
+}
+.card {
+	border: 0;
+	box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+	-ms-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #ffffff;
+	background-clip: border-box;
+	border: 1px solid #e6e4e9;
+	border-radius: 8px;
+	&.search-empty {
+		width: 80%;
+		margin: 0 auto;
+		margin-top: 1rem;
+		background-color: #f1e9e4;
+		border: 0 ;
+	}
+}
+.custom-alert {
+	margin-bottom: 0;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.search-body {
+		.search-filters {
+			display: flex;
+			.filter-list {
+				margin-right: 1rem;
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.col-lg-2 {
+		flex: 0 0 16.66667%;
+		max-width: 16.66667%;
+	}
+}

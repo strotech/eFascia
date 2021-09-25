@@ -71,7 +71,7 @@ const DashboardChart=(props)=> {
                 activeShape={renderActiveShape}
                 data={data}
                 cx={420}
-                cy={200}
+                cy={225}
                 innerRadius={60}
                 outerRadius={80}
                 fill="#8884d8"

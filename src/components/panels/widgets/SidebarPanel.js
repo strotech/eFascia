@@ -26,7 +26,7 @@ const SidebarPanel=(props)=> {
     }
   
   return (
-    <div className="sidebar"  data-color='blue'>
+    <div className="sidebar"  data-color='azure'>
       <div
         className="sidebar-background"
         style={{
@@ -47,7 +47,7 @@ const SidebarPanel=(props)=> {
             </div>
           </a>
           <a className="simple-text" href="/admin/about">
-            DevX Prime
+                         e-Fascia
           </a>
         </div>
         <Nav>

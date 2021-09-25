@@ -43,5 +43,11 @@
         }
       ]
     }
+  },
+  "analytics": {
+    "efascia": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }

@@ -11,6 +11,7 @@ body > .navbar-collapse{
     font-weight: 200;
     background-size: cover;
     background-position: center center;
+    box-shadow: 8px 0px 5px $theme-shadow;
 
     .sidebar-wrapper{
         position: relative;
@@ -257,13 +258,14 @@ body > .navbar-collapse{
     &[data-color="purple"]:after{
         @include icon-gradient($new-purple, $purple-color-bottom);
     }
+ 
 }
 
 body,
 .wrapper {
   min-height: 100vh;
   position: relative;
-  background-color: white; 
+  background-color: #dcdcdc; 
   font-family: $google-bona-nova-font;
 }
 
@@ -323,6 +325,21 @@ body,
     &[data-color="blue"]:after{
         @include icon-gradient(#223da0, rgba(#050d49b3,.7));
     }
+    &[data-color="azure"]:after{
+        @include icon-gradient($new-blue, rgba($azure-color-bottom,.3));
+    }
+    &[data-color="green"]:after{
+        @include icon-gradient($new-green, $green-color-bottom);
+    }
+    &[data-color="orange"]:after{
+        @include icon-gradient($new-orange, $orange-color-bottom);
+    }
+    &[data-color="red"]:after{
+        @include icon-gradient($new-red, $red-color-bottom);
+    }
+    &[data-color="purple"]:after{
+        @include icon-gradient($new-purple, $purple-color-bottom);
+    }
     .logo-img img {
       max-width: 40px;
       max-height: 40px;
@@ -330,7 +347,9 @@ body,
 }
 
 .navbar-custom {
-    @include navbar-color(#c7d0e4);
+    background-color: #22c5e8;
+    box-shadow: 0px 8px 5px $theme-shadow;
+    z-index: 1;
 }
 
 .nav-items-custom {

@@ -30,7 +30,8 @@ const twitterClient = new TwitterClient({
   apiKey: parameterFilter('TWITTER_API_KEY'),
   apiSecret: parameterFilter('TWITTER_API_SECRET'),
   accessToken: parameterFilter('TWITTER_ACCESS_TOKEN'),
-  accessTokenSecret: parameterFilter('TWITTER_ACCESS_TOKEN_SECRET')
+  accessTokenSecret: parameterFilter('TWITTER_ACCESS_TOKEN_SECRET'),
+  disableCache: true
 })
 
 const rulesURL = new URL(

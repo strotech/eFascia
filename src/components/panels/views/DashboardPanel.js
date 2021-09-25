@@ -3,9 +3,15 @@ import DashboardChart from '../widgets/DashboardChart';
 
 const DashboardSidebarPanel =()=> {
     return (
-      <div className="card">
-        <div className="card-body">
-          <DashboardChart />
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 card-margin">
+            <div class="card dashboard-box">
+              <div class="card-body p-0">
+                <DashboardChart />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
