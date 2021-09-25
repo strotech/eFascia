@@ -6,7 +6,7 @@
 - Mobile notification enabled
 
 **Demo** <br/>
-![eFasciaDemo](https://youtu.be/prpy48B-nCg)
+https://youtu.be/prpy48B-nCg
 
 **Steps to run:**
 ###### Local:
