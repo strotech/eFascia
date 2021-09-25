@@ -29,7 +29,7 @@ const TweetsPanel =(props)=> {
                 return "bg-base"
           }
     }
-    
+    console.log('tweets',tweets);
     return (
       <div class="container">
       <div class="row">

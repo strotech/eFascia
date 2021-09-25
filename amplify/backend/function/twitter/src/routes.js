@@ -31,7 +31,7 @@ const twitterClient = new TwitterClient({
   apiSecret: parameterFilter('TWITTER_API_SECRET'),
   accessToken: parameterFilter('TWITTER_ACCESS_TOKEN'),
   accessTokenSecret: parameterFilter('TWITTER_ACCESS_TOKEN_SECRET'),
-  disableCache: true
+  // disableCache: true
 })
 
 const rulesURL = new URL(
@@ -116,11 +116,6 @@ app.post("/api/rules", async (req, res) => {
         q: `#{hashtag}`,
         result_type: 'recent',
     });
-    res.json(tweetList.statuses.map(status=>{
-      return {
-        id: status.id,
-        text: status.text
-      }
-    }));
+    res.json(tweetList.statuses.map(status=>status));
   });
 }
