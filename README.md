@@ -17,6 +17,8 @@ Configure the amplify console to fetch the source code from your repo.
 **Backend**: Nodejs
 **Third party applications**: Twitter
 **Cloud provider**: AWS with amplify
+**Analytics provider**: AWS Pinpoint
+**Mobility provider**: Telegram
 
 ##### Architecture:
 
@@ -24,6 +26,7 @@ Configure the amplify console to fetch the source code from your repo.
 The dashboard page is a placeholder to showcas the capabilities of the product.
 The Tweets page can (as of now) fetch only tweets corresponding to a hashtag.
 The abouts page is a placeholder as well.
+The styling is kept basic as this is a generic product without a theme. The product can easily be styled according to a theme to which this product will be customized.
 
 ##### Developer Support
 Amplify authentication theming

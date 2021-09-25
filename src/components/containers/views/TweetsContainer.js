@@ -9,7 +9,7 @@ const TweetsContainer = () => {
     {
       result:[{
           id: -1,
-          text : 'No hashtags searched!!. You can try with some of the most recently searched hashtags like #Covid19,#flood18, etc.'
+          text : 'No hashtags searched!!. You can try with some of the popular hashtags like #Covid19, #flood18 , etc.'
       }],
       type:'warning'
     });
