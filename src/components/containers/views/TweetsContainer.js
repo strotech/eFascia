@@ -5,14 +5,14 @@ import TweetsPanel from '../../panels/views/TweetsPanel'
 
 const TweetsContainer = () => {
  
-  const [tweets,setTweets] = useState(
-    {
-      result:[{
-          id: -1,
-          text : 'No hashtags searched!!. You can try with some of the popular hashtags like #Covid19, #flood18 , etc.'
-      }],
-      type:'warning'
-    });
+  const [errors,setErrors] = useState({
+    result:[{
+        id: -1,
+        text : 'No hashtags searched!!. You can try with some of the popular hashtags like #Covid19, #flood18 , etc.'
+    }],
+    type:'info'
+  });
+  const [tweets,setTweets] = useState({});
   const [loading,isLoading] = useState(false);
   const getTweets = async (searchValue)=>{
     console.log('searching',searchValue)
@@ -24,30 +24,25 @@ const TweetsContainer = () => {
         type: 'success'
       }
     });
-    if(tweetResult.length == 0){
-      tweetResult.push({
+    if(tweetResult.length === 0){     
+      setErrors({
         result:[{
           id: 0,
           text : 'No tweets found for the search criteria!'
         }],
         type: 'warning'
-      })
+      });
     }
     Analytics.record({
       name: 'hashtag', 
       // Attribute values must be strings
       attributes: { hashtagName: searchValue }
     });
-    setTweets(prevState=>{
-      return {
-        ...prevState,
-        tweetResult
-      }
-    });
+    setTweets(tweetResult);
   }
 
   return (
-    <TweetsPanel tweets={tweets} setTweets={setTweets} getTweets={getTweets} isLoading={isLoading} loading={loading} />
+    <TweetsPanel tweets={tweets} errors={errors} setErrors={setErrors} setTweets={setTweets} getTweets={getTweets} isLoading={isLoading} loading={loading} />
   );
 };
 

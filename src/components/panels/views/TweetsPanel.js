@@ -5,7 +5,7 @@ import ErrorMessage from '../widgets/ErrorMessage';
 
 
 const TweetsPanel =(props)=> {
-    const {tweets,getTweets, isLoading, loading, setTweets } = props;
+    const {tweets,getTweets, isLoading, loading, setTweets,errors, setErrors } = props;
     const [searchValue,setSearchValue] = useState('');
     const onSubmit =()=>{
       getTweets(searchValue)
@@ -221,7 +221,7 @@ const TweetsPanel =(props)=> {
           </div>
        : null           
        } 
-       {tweets.type==="warning" && loading==false ?<ErrorMessage errors={tweets}/> : null}
+       {tweets.type==="warning" && loading==false ?<ErrorMessage errors={errors}/> : null}
        <SpinnerWidget loading={loading}/>   
       </div>
     );
