@@ -1,5 +1,10 @@
 **eFascia** is an analytics enabled generic reporting platform. It is currently equipped to display tweets for a hashtag that the user searches for. The search results will also get streamed to a configured telegram channel.
 
+**Features**
+- Encryption at rest and transit
+- Analytics enabled backend
+- Mobile notification enabled
+
 **Demo**
 
 **Steps to run:**
@@ -19,6 +24,11 @@
 - Cloud provider: AWS with amplify
 - Analytics provider: AWS Pinpoint
 - Mobility provider: Telegram
+
+**Libraries**
+- Charts:  recharts
+- Spinner: react-spinners
+- Twitter client: twitter-api-client
 
 **Architecture:**
 
