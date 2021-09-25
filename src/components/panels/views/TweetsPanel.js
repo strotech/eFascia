@@ -221,7 +221,7 @@ const TweetsPanel =(props)=> {
           </div>
        : null           
        } 
-       {tweets.type==="warning" && loading==false ?<ErrorMessage errors={errors}/> : null}
+       {tweets.type!=="success" && loading==false ?<ErrorMessage errors={errors}/> : null}
        <SpinnerWidget loading={loading}/>   
       </div>
     );
