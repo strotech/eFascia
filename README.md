@@ -46,3 +46,4 @@ https://docs.amplify.aws/ui/customization/theming/q/framework/react/
 ###### Styles support
 https://www.bootdey.com/snippets/view/General-Search-Results#preview
 
+*Note: If you find any UX bugs please raise an issue in this repo. This repo currently caters to the happy flow. More is on the way!!!!*
