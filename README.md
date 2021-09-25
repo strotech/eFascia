@@ -4,21 +4,21 @@
 
 ##### Steps to run:
 ###### Local:
-amplify push --y
-yarn install
-yarn start
+- amplify push --y
+- yarn install
+- yarn start
 ###### Remote:
-Clone the remote and push to your repo.
-Configure the amplify console to fetch the source code from your repo.
+- Clone the remote and push to your repo.
+- Configure the amplify console to fetch the source code from your repo.
 
 ##### Technologies:
-**UI/UX**: SASS
-**Front end**: React
-**Backend**: Nodejs
-**Third party applications**: Twitter
-**Cloud provider**: AWS with amplify
-**Analytics provider**: AWS Pinpoint
-**Mobility provider**: Telegram
+- **UI/UX**: SASS
+- **Front end**: React
+- **Backend**: Nodejs
+- **Third party applications**: Twitter
+- **Cloud provider**: AWS with amplify
+- **Analytics provider**: AWS Pinpoint
+- **Mobility provider**: Telegram
 
 ##### Architecture:
 
