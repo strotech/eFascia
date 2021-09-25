@@ -30,8 +30,8 @@
 - Spinner: react-spinners
 - Twitter client: twitter-api-client
 
-**Architecture:**
-![eFascia, Architecture](./eFascia_Architecture.png)
+**Architecture:** <br/>
+![eFascia, Architecture](./eFasciaArchitecture.png)
 
 **Product Notes:** <br/>
 The dashboard page is a placeholder to showcas the capabilities of the product.
