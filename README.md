@@ -31,8 +31,9 @@
 - Twitter client: twitter-api-client
 
 **Architecture:**
+![eFascia, Architecture](./eFascia_Architecture.png)
 
-**Product Notes:**
+**Product Notes:** <br/>
 The dashboard page is a placeholder to showcas the capabilities of the product.
 The Tweets page can (as of now) fetch only tweets corresponding to a hashtag.
 The abouts page is a placeholder as well.
