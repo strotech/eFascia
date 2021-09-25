@@ -113,7 +113,7 @@ app.post("/api/rules", async (req, res) => {
 
   app.get("/api/tweets/:hashtag", async (req, res) => {
     const tweetList = await twitterClient.tweets.search({
-        q: `#${hashtag}`,
+        q: `#${req.params.hashtag}`,
         result_type: 'recent',
     });
     console.log(tweetList);
