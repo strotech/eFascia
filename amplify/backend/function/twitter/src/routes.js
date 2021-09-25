@@ -31,7 +31,7 @@ const twitterClient = new TwitterClient({
   apiSecret: parameterFilter('TWITTER_API_SECRET'),
   accessToken: parameterFilter('TWITTER_ACCESS_TOKEN'),
   accessTokenSecret: parameterFilter('TWITTER_ACCESS_TOKEN_SECRET'),
-  // disableCache: true
+  disableCache: true
 })
 
 const rulesURL = new URL(
