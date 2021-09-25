@@ -5,7 +5,8 @@
 - Analytics enabled backend
 - Mobile notification enabled
 
-**Demo**
+**Demo** <br/>
+![eFasciaDemo](https://youtu.be/prpy48B-nCg)
 
 **Steps to run:**
 ###### Local:
