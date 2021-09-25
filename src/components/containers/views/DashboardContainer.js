@@ -1,4 +1,4 @@
-import React,{ useEffect }  from 'react';
+import React from 'react';
 import {API} from 'aws-amplify';
 import config from '../../../aws-exports';
 

@@ -1,5 +1,4 @@
 import React, {useState}  from 'react';
-import Tweets from './Tweets';
 import SpinnerWidget from '../widgets/SpinnerWidget';
 import ErrorMessage from '../widgets/ErrorMessage';
 
@@ -8,7 +7,8 @@ const TweetsPanel =(props)=> {
     const {tweets,getTweets, isLoading, loading, setTweets,errors, setErrors } = props;
     const [searchValue,setSearchValue] = useState('');
     const onSubmit =()=>{
-      getTweets(searchValue)
+      getTweets(searchValue);
+      
       isLoading(true);
     }
     const onClear = () => {
@@ -67,7 +67,8 @@ const TweetsPanel =(props)=> {
               </div>
           </div>
       </div>
-      {tweets.type==="success" && loading==false ?
+      {tweets && tweets.type && tweets.type==="success" && tweets.result.length>0  && loading===false ?
+            
             <div class="row">
               <div class="col-12">
                   <div class="card card-margin">
@@ -162,9 +163,11 @@ const TweetsPanel =(props)=> {
                                                               </div>
                                                           </td>
                                                           <td>
-                                                            {tweet.entities.hashtags.map(entity=>
+                                                            {tweet.entities.length>0?tweet.entities.hashtags.map(entity=>
                                                               <div class="tweet-results-item-hashtags ">#{entity}</div>
-                                                              )}
+                                                              ):
+                                                              <div class="tweet-results-item-hashtags ">0 hashtags</div>
+                                                              }
                                                           </td>
                                                           <td>
                                                               <div class="tweet-results-item-category bg-soft-base">

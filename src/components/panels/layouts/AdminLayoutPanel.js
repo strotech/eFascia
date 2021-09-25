@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch } from "react-router-dom";
 
 import SidebarContainer from '../../containers/widgets/SidebarContainer';
-import AdminNavbarContainer from '../../containers/widgets/AdminNavbarContainer';
+// import AdminNavbarContainer from '../../containers/widgets/AdminNavbarContainer';
 
 
 const AdminLayoutPanel =(props)=> {

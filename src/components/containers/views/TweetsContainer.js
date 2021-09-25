@@ -33,6 +33,7 @@ const TweetsContainer = () => {
         type: 'warning'
       });
     }
+    console.log(tweetResult);
     Analytics.record({
       name: 'hashtag', 
       // Attribute values must be strings
