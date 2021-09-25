@@ -116,6 +116,7 @@ app.post("/api/rules", async (req, res) => {
         q: `#{hashtag}`,
         result_type: 'recent',
     });
+    console.log(tweetList);
     res.json(tweetList.statuses.map(status=>status));
   });
 }
