@@ -163,7 +163,7 @@ const TweetsPanel =(props)=> {
                                                               </div>
                                                           </td>
                                                           <td>
-                                                            {tweet.entities.length>0?tweet.entities.hashtags.map(entity=>
+                                                            {tweet.entities.hashtags.length>0?tweet.entities.hashtags.map(entity=>
                                                               <div class="tweet-results-item-hashtags ">#{entity}</div>
                                                               ):
                                                               <div class="tweet-results-item-hashtags ">0 hashtags</div>
