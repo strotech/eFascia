@@ -20,6 +20,7 @@
 - UI/UX: SASS
 - Front end: React
 - Backend: Nodejs
+- Communication: REST
 - Third party applications: Twitter
 - Cloud provider: AWS with amplify
 - Analytics provider: AWS Pinpoint
