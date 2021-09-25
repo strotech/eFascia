@@ -7,7 +7,7 @@ import ErrorMessage from '../widgets/ErrorMessage';
 const TweetsPanel =(props)=> {
     const {tweets,getTweets, isLoading, loading, setTweets } = props;
     const [searchValue,setSearchValue] = useState('');
-    const onSubmit =()=>{
+    const onSubmit =(searchValue)=>{
       getTweets(searchValue)
       isLoading(true);
     }
@@ -38,7 +38,7 @@ const TweetsPanel =(props)=> {
                   <div class="card-body p-0">
                       <form id="search-form" onSubmit={e=>{
                            e.preventDefault();
-                           onSubmit();
+                           onSubmit(e.target.value);
                       }}>
                           <div class="row">
                               <div class="col-12">
@@ -55,7 +55,7 @@ const TweetsPanel =(props)=> {
                                           <input type="text" placeholder="Search..." class="form-control" id="search" name="search" />
                                       </div>
                                       <div class="col-lg-1 col-md-3 col-sm-12 p-0">
-                                          <button type="submit" class="btn btn-base" onClick={() => onSubmit()}>
+                                          <button type="submit" class="btn btn-base" onClick={(e) => onSubmit(e.target.value)}>
                                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                                           </button>
                                       </div>
