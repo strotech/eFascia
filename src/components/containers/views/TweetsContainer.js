@@ -15,6 +15,7 @@ const TweetsContainer = () => {
     });
   const [loading,isLoading] = useState(false);
   const getTweets = async (searchValue)=>{
+    console.log('searching',searchValue)
     await API.get('efasciaapi','/telegram/covid').then(res=>console.log(res));
     let tweetResult  = await API.get('efasciaapi',`/api/tweets/${searchValue}`).then(res=>{
       isLoading(false);
