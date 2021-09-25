@@ -1,4 +1,5 @@
 import React , {useState} from "react";
+import  { Analytics } from 'aws-amplify';
 import {API} from 'aws-amplify';
 import TweetsPanel from '../../panels/views/TweetsPanel'
 
