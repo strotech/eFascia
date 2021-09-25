@@ -21,10 +21,9 @@
 - Front end: React
 - Backend: Nodejs
 - Communication: REST
-- Third party applications: Twitter
+- Third party applications: Twitter, Telegram
 - Cloud provider: AWS with amplify
 - Analytics provider: AWS Pinpoint
-- Mobility provider: Telegram
 
 **Libraries**
 - Charts:  recharts
