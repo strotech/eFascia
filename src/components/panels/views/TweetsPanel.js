@@ -38,7 +38,7 @@ const TweetsPanel =(props)=> {
                   <div class="card-body p-0">
                       <form id="search-form" onSubmit={e=>{
                            e.preventDefault();
-                           onSubmit();
+                        //    onSubmit();
                       }}>
                           <div class="row">
                               <div class="col-12">
